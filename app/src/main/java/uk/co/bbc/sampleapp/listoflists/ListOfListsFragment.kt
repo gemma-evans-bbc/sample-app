@@ -22,7 +22,7 @@ class ListOfListsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val verticalItems = VerticalItemsDataProvider().getItems(10)
+        val verticalItems = VerticalItemsDataProvider(HorizontalItemsDataProvider()).getItems(10)
         val adapter = VerticalListAdapter(verticalItems)
 
         vertical_list.layoutManager = LinearLayoutManager(context)
