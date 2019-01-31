@@ -1,7 +1,8 @@
 package uk.co.bbc.sampleapp.listoflists
 
-import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import androidx.core.view.ViewCompat
+import androidx.recyclerview.widget.RecyclerView
 
 class VerticalListAdapter(private val verticalItems:List<VerticalItemUIModel>) : RecyclerView.Adapter<VerticalListAdapter.VerticalItemViewHolder>() {
 
@@ -13,6 +14,7 @@ class VerticalListAdapter(private val verticalItems:List<VerticalItemUIModel>) :
     }
 
     override fun onBindViewHolder(holder: VerticalItemViewHolder, position: Int) {
+        ViewCompat.setAccessibilityDelegate(holder.verticalItemView, HeadingAccessibilityDelegate(position))
         holder.verticalItemView.render(verticalItems[position])
     }
 

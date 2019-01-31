@@ -1,7 +1,7 @@
 package uk.co.bbc.sampleapp.listoflists
 
-import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 
 class HorizontalListAdapter(private val horizontalItems:List<HorizontalItemUIModel>) : RecyclerView.Adapter<HorizontalListAdapter.HorizontalItemViewHolder>() {
 

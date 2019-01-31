@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryDark"
-    android:focusableInTouchMode="true">
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:id="@+id/title"
@@ -17,7 +16,7 @@
         android:padding="10dp"
         tools:text="Vertical Item 1"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/horizontal_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,9 +28,5 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#CACACA" />
-
-
-
-
 
 </LinearLayout>
