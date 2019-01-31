@@ -1,6 +1,7 @@
 package uk.co.bbc.sampleapp.listoflists
 
-class VerticalItemsDataProvider (val horizontalItemsDataProvider: HorizontalItemsDataProvider) {
+class VerticalItemsDataProvider (private val horizontalItemsDataProvider: HorizontalItemsDataProvider) {
+
     fun getItems(totalItems: Int): List<VerticalItemUIModel> {
         val verticalItems = mutableListOf<VerticalItemUIModel>()
 

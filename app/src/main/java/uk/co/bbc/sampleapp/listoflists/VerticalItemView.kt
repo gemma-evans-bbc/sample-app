@@ -5,13 +5,14 @@ import android.support.constraint.ConstraintLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.FrameLayout
 import kotlinx.android.synthetic.main.vertical_item_view.view.*
 import uk.co.bbc.sampleapp.R
 
 
 class VerticalItemView@JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : ConstraintLayout(context, attrs, defStyleAttr) {
+) : FrameLayout(context, attrs, defStyleAttr) {
 
     private val horizontalItems = mutableListOf<HorizontalItemUIModel>()
     private val adapter = HorizontalListAdapter(horizontalItems)
