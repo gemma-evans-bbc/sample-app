@@ -10,7 +10,7 @@
         android:id="@+id/title"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@color/colorAccent"
+        android:background="?colorAccent"
         android:textColor="@android:color/white"
         android:textSize = "18sp"
         android:padding="4dp"

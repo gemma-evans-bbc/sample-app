@@ -1,11 +1,11 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.KidsAppTheme" parent="Theme.UiToolkit">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/kidsPrimary</item>
+        <item name="colorPrimaryDark">@color/kidsPrimaryDark</item>
+        <item name="colorAccent">@color/kidsAccent</item>
     </style>
 
 </resources>
