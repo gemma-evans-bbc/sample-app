@@ -1,1 +1,1 @@
-include ':app', 'home-feature:home-main', 'home-feature:home-view'
+include ':app', ':kidsiplayerapp', 'home-feature:home-main', 'home-feature:home-view'
