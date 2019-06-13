@@ -11,8 +11,8 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textSize = "25sp"
+        android:textColor="?headingTextColor"
+        android:textSize = "?headingTextSize"
         android:padding="10dp"
         tools:text="Vertical Item 1"/>
 

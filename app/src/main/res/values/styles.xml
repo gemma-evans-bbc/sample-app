@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/iplayerPrimary</item>
         <item name="colorPrimaryDark">@color/iplayerPrimaryDark</item>
         <item name="colorAccent">@color/iplayerAccent</item>
+        <item name="headingTextSize">50sp</item>
     </style>
 
 

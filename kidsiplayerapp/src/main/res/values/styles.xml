@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/kidsPrimary</item>
         <item name="colorPrimaryDark">@color/kidsPrimaryDark</item>
         <item name="colorAccent">@color/kidsAccent</item>
+        <item name="headingTextSize">12sp</item>
     </style>
 
 </resources>

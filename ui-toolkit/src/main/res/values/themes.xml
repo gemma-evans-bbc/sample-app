@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="android:windowBackground">@color/background</item>
+        <item name="headingTextColor">@android:color/holo_red_dark</item>
+        <item name="headingTextSize">30sp</item>
     </style>
 
     <style name="Theme.UiToolkit" parent="@style/Theme.AppCompat">
@@ -13,6 +15,8 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="android:windowBackground">@color/background</item>
+        <item name="headingTextColor">@android:color/holo_red_dark</item>
+        <item name="headingTextSize">30sp</item>
 
     </style>
 
