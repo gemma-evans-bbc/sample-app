@@ -27,6 +27,7 @@ class ListOfListsFragment : Fragment() {
 
         vertical_list.layoutManager = LinearLayoutManager(context)
         vertical_list.adapter = adapter
+
     }
 
 }

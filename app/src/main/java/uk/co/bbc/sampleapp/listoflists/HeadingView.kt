@@ -4,20 +4,21 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import kotlinx.android.synthetic.main.horizontal_item_view.view.*
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.heading_view.view.*
 import kotlinx.android.synthetic.main.horizontal_list_view.view.*
 import uk.co.bbc.sampleapp.R
 
 
-class HorizontalItemView @JvmOverloads constructor(
+class HeadingView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.horizontal_item_view, this)
+        LayoutInflater.from(context).inflate(R.layout.heading_view, this)
     }
 
-    fun render(horizontalItemUIModel: HorizontalItemUIModel) {
-        title.text = horizontalItemUIModel.title
+    fun render(headingItemUIModel: HeadingItemUIModel) {
+        title.text = headingItemUIModel.title
     }
 }

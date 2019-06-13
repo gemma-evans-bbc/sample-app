@@ -4,22 +4,43 @@ import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class VerticalListAdapter(private val verticalItems:List<VerticalItemUIModel>) : RecyclerView.Adapter<VerticalListAdapter.VerticalItemViewHolder>() {
+class VerticalListAdapter(private val verticalItems: List<VerticalItem>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    class VerticalItemViewHolder(val verticalItemView: VerticalItemView) : RecyclerView.ViewHolder(verticalItemView)
+    class HeadingViewHolder(val headingView: HeadingView) : RecyclerView.ViewHolder(headingView)
+    class HorizontalListViewHolder(val horizontalListView: HorizontalListView) :
+        RecyclerView.ViewHolder(horizontalListView)
 
-    override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): VerticalListAdapter.VerticalItemViewHolder {
-        return VerticalItemViewHolder(VerticalItemView(parent.context))
+    override fun getItemViewType(position: Int): Int {
+        val type = verticalItems[position].type
+        return type.ordinal
     }
 
-    override fun onBindViewHolder(holder: VerticalItemViewHolder, position: Int) {
-        ViewCompat.setAccessibilityDelegate(holder.verticalItemView, HeadingAccessibilityDelegate(position))
-        holder.verticalItemView.render(verticalItems[position])
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): RecyclerView.ViewHolder {
+        return when (viewType) {
+            0 -> HeadingViewHolder(HeadingView(parent.context))
+            else -> HorizontalListViewHolder(HorizontalListView(parent.context))
+        }
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when(holder) {
+            is HeadingViewHolder -> {
+                holder.headingView.render(verticalItems[position] as HeadingItemUIModel)
+                ViewCompat.setAccessibilityDelegate(
+                    holder.headingView,
+                    HeadingAccessibilityDelegate(position)
+                )
+            }
+            is HorizontalListViewHolder -> holder.horizontalListView.render(verticalItems[position] as HorizontalList)
+        }
+
     }
 
     override fun getItemCount() = verticalItems.size
-
 
 
 }
